@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tutorial.title %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @tutorial.product %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @tutorial.version %>
+</p>
+
+<p>
+  <strong>Date published:</strong>
+  <%= @tutorial.date_published %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @tutorial.author %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @tutorial.rating %>
+</p>
+
+<p>
+  <strong>Likes:</strong>
+  <%= @tutorial.likes %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @tutorial.summary %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @tutorial.html %>
+</p>
+
+<%= link_to 'Edit', edit_tutorial_path(@tutorial) %> |
+<%= link_to 'Back', tutorials_path %>
