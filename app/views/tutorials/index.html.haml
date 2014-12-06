@@ -1,35 +1,23 @@
-%h1 Listing tutorials
+%h1 Rottentutorials
 
-%table
-  %tr
-    %th Title
-    %th Product
-    %th Version
-    %th Date published
-    %th Author
-    %th Rating
-    %th Likes
-    %th Summary
-    %th Html
-    %th
-    %th
-    %th
+= form_tag "/", method: :get do
+  = label_tag "Which product are you searching for?"
+  = text_field_tag :search_product
+  %br
+  = label_tag "What keywords?"
+  = text_field_tag :search_keywords
+  %br
+  = submit_tag
 
-  - @tutorials.each do |tutorial|
-    %tr
-      %td= tutorial.title
-      %td= tutorial.product
-      %td= tutorial.version
-      %td= tutorial.date_published
-      %td= tutorial.author
-      %td= tutorial.rating
-      %td= tutorial.likes
-      %td= tutorial.summary
-      %td= tutorial.html
-      %td= link_to 'Show', tutorial
-      %td= link_to 'Edit', edit_tutorial_path(tutorial)
-      %td= link_to 'Destroy', tutorial, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
+- @tutorials.group_by {|t| t.version}.each do |version, tutorials|
+  %div= version
+  - tutorials.each do |tutorial|
+    %div
+      %h3= link_to tutorial.title, tutorial
+      = tutorial.product
+      = tutorial.author
+      = tutorial.summary
 %br
 
 = link_to 'New Tutorial', new_tutorial_path
