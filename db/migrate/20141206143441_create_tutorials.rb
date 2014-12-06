@@ -6,8 +6,6 @@ class CreateTutorials < ActiveRecord::Migration
       t.string :version
       t.datetime :date_published
       t.string :author
-      t.integer :rating
-      t.integer :likes
       t.string :summary
       t.text :html
 

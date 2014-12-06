@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @tutorial.title
+%p
+  %b Product:
+  = @tutorial.product
+%p
+  %b Version:
+  = @tutorial.version
+%p
+  %b Date published:
+  = @tutorial.date_published
+%p
+  %b Author:
+  = @tutorial.author
+%p
+  %b Rating:
+  = @tutorial.rating
+%p
+  %b Likes:
+  = @tutorial.likes
+%p
+  %b Summary:
+  = @tutorial.summary
+%p
+  %b Html:
+  = @tutorial.html
+
+= link_to 'Edit', edit_tutorial_path(@tutorial)
+\|
+= link_to 'Back', tutorials_path

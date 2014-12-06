@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: tutorialdb_production
-  username: tutorialdb
-  password: <%= ENV['TUTORIALDB_DATABASE_PASSWORD'] %>
+  #username: tutorialdb
+  #password: <%= ENV['TUTORIALDB_DATABASE_PASSWORD'] %>

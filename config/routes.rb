@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'tutorials#index'
+  resources :reviews
+
   resources :tutorials
 
   # The priority is based upon order of creation: first created -> highest priority.

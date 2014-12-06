@@ -25,25 +25,13 @@
   <%= @tutorial.author %>
 </p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @tutorial.rating %>
-</p>
-
-<p>
-  <strong>Likes:</strong>
-  <%= @tutorial.likes %>
-</p>
 
 <p>
   <strong>Summary:</strong>
   <%= @tutorial.summary %>
 </p>
 
-<p>
-  <strong>Html:</strong>
-  <%= @tutorial.html %>
-</p>
+
 
 <%= link_to 'Edit', edit_tutorial_path(@tutorial) %> |
 <%= link_to 'Back', tutorials_path %>
